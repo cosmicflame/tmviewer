@@ -1,5 +1,6 @@
 /*
   This file is part of Tibia Map Viewer.
+  Copyright (c) 2001-2006 by Yury Sidorov.
 
   Tibia Map Viewer is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
