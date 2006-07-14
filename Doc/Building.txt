@@ -1,0 +1,7 @@
+To build Tibia Map Viewer you need to use Microsoft Visual C++ 6.0.
+
+To build from command line just run:
+nmake -f make.mak
+
+To build setup you need to use NSIS 2:
+Run !MakeSetup.bat in Setup folder to create installation package.

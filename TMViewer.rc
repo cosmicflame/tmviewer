@@ -1,0 +1,663 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\TMViewer.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+MAINICON                ICON    DISCARDABLE     "res\\TMViewer.ico"
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_EDITOR_TOOLBAR      BITMAP  DISCARDABLE     "res\\toolbar1.bmp"
+IDR_VIEWER_TOOLBAR      BITMAP  DISCARDABLE     "res\\viewer_t.bmp"
+IDB_Show                BITMAP  DISCARDABLE     "res\\Show.bmp"
+IDB_Hide                BITMAP  DISCARDABLE     "res\\Hide.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 186, 116
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Tibia Map Viewer"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            "MAINICON",IDC_STATIC,15,15,20,20
+    CONTROL         "Tibia Map Viewer %s",IDC_VERSION,"Static",
+                    SS_LEFTNOWORDWRAP | SS_NOPREFIX | WS_GROUP,46,15,125,8
+    LTEXT           "Copyright (C) 2001-2006 by",IDC_STATIC,46,28,117,8
+    DEFPUSHBUTTON   "OK",IDOK,129,96,50,14,WS_GROUP
+    LTEXT           "E-mail:",IDC_STATIC,46,52,23,8
+    LTEXT           " Yury Sidorov AKA Super Radz",IDC_STATIC,66,40,98,8
+    LTEXT           "yury_sidorov@mail.ru",IDC_EMAIL,71,52,70,8,SS_NOTIFY
+    LTEXT           "Visit the official Tibia Map Viewer site:",IDC_STATIC,
+                    46,63,119,8
+    LTEXT           "http://tmviewer.blagovest.ua",IDC_FTP,71,73,92,8,
+                    SS_NOTIFY
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,6,6,173,84
+END
+
+IDD_StylesList DIALOG DISCARDABLE  0, 0, 201, 201
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit styles"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_STYLES_LIST,7,7,130,109,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "New..",IDC_btNewStyle,144,7,50,14
+    PUSHBUTTON      "Edit",IDC_btEditStyle,144,24,50,14
+    PUSHBUTTON      "Delete",IDC_btDeleteStyle,144,42,50,14
+    PUSHBUTTON      "Close",IDCANCEL,144,102,50,14
+END
+
+IDD_TextProps DIALOG DISCARDABLE  0, 0, 148, 79
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New text label"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT_TEXT,6,6,135,46,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_WANTRETURN
+    DEFPUSHBUTTON   "OK",IDOK,35,59,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,91,59,50,14
+END
+
+IDD_EditStyle DIALOG DISCARDABLE  0, 0, 212, 196
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New style"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_edStyleName,16,22,178,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Change...",IDC_btChangeFont,159,50,37,13
+    CONTROL         "Shadow",IDC_chkShadow,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,67,42,10
+    DEFPUSHBUTTON   "OK",IDOK,99,175,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,155,175,50,14
+    CONTROL         "",IDC_FRAME,"Static",SS_ETCHEDFRAME,7,7,198,161
+    LTEXT           "Font:",IDC_STATIC,16,40,17,8
+    EDITTEXT        IDC_edFontName,16,50,138,13,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    LTEXT           "Style name:",IDC_STATIC,16,13,38,8
+END
+
+IDD_MarksList DIALOG DISCARDABLE  0, 0, 213, 159
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit mark categories"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List2",IDC_Marks,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | 
+                    LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | 
+                    WS_TABSTOP,7,7,140,145
+    PUSHBUTTON      "New..",IDC_btNewMark,156,7,50,14
+    PUSHBUTTON      "Edit",IDC_btEditMark,156,24,50,14
+    PUSHBUTTON      "Delete",IDC_btDeleteMark,156,42,50,14
+    PUSHBUTTON      "Close",IDCANCEL,156,138,50,14
+    PUSHBUTTON      "Move up",IDC_MoveUp,156,77,50,14
+    PUSHBUTTON      "Move down",IDC_MoveDown,156,95,50,14
+END
+
+IDD_EditMarkCat DIALOG DISCARDABLE  0, 0, 222, 108
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New mark category"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Change...",IDC_btSelBmp,87,37,42,14
+    EDITTEXT        IDC_edDescr,62,58,144,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,110,88,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,166,88,50,14
+    CONTROL         "",IDC_MarkImg,"Static",SS_BLACKRECT | SS_NOTIFY | 
+                    SS_CENTERIMAGE | SS_SUNKEN,62,35,21,19
+    LTEXT           "Mark image:",IDC_STATIC,15,40,40,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,6,6,210,75
+    LTEXT           "Mark name:",IDC_STATIC,15,61,38,8
+    LTEXT           "Mark image dimensions are 20x20 pixels. If possible, use images with this dimensions to prevent stretching.",
+                    IDC_STATIC,17,14,191,18
+END
+
+IDD_NewMark DIALOG DISCARDABLE  0, 0, 245, 191
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New mark"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_cbCategory,"ComboBoxEx32",CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,15,24,213,130
+    EDITTEXT        IDC_ShortText,15,54,213,32,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    EDITTEXT        IDC_LongText,15,98,213,56,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,131,170,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,188,170,50,14
+    LTEXT           "Mark category:",IDC_STATIC,15,14,48,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,7,7,231,157
+    LTEXT           "Description:",IDC_STATIC,15,44,38,8
+    LTEXT           "Notes:",IDC_STATIC,15,88,22,8
+END
+
+IDD_NewSymbols DIALOG DISCARDABLE  0, 0, 186, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New map symbols"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Clear text styles",IDC_ClearStyles,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,41,152,10
+    CONTROL         "Clear mark categories",IDC_ClearCats,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,52,131,10
+    DEFPUSHBUTTON   "OK",IDOK,73,74,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,74,50,14
+    LTEXT           "Now all current map symbols will be cleared.\r\rYou can select what else will be cleared too:",
+                    IDC_STATIC,16,13,150,27
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,6,6,174,62
+END
+
+IDD_MergeMaps DIALOG DISCARDABLE  0, 0, 242, 113
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Merge maps"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "...",IDC_Browse,211,49,16,14
+    CONTROL         "Make new areas fogged",IDC_Fogged,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,69,136,10
+    DEFPUSHBUTTON   "OK",IDOK,130,93,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,186,93,50,14
+    EDITTEXT        IDC_MergeWith,14,49,195,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,6,6,230,80
+    LTEXT           "Map files, located in folder specified below, will be merged with currently opened map.",
+                    IDC_STATIC,14,13,212,27
+    LTEXT           "Merge with:",IDC_STATIC,14,39,38,8
+END
+
+IDD_ExportTo DIALOG DISCARDABLE  0, 0, 237, 100
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Export to BMP"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "...",IDC_Browse,206,25,16,14
+    CONTROL         "Export map symbols",IDC_ExportSymbols,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,43,136,10
+    CONTROL         "Export using current zoom ratio",IDC_ExportZoom,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,55,113,10
+    DEFPUSHBUTTON   "OK",IDOK,124,80,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,181,80,50,14
+    EDITTEXT        IDC_ExportFile,16,25,187,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,6,6,225,67
+    LTEXT           "Export to file:",IDC_STATIC,16,14,42,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 179
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 110
+    END
+
+    IDD_StylesList, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 194
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_TextProps, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 141
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 73
+    END
+
+    IDD_EditStyle, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 189
+    END
+
+    IDD_MarksList, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 206
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_EditMarkCat, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 216
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 102
+    END
+
+    IDD_NewMark, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 238
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 184
+    END
+
+    IDD_NewSymbols, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 180
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_MergeMaps, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 236
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_ExportTo, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 231
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 94
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURMAGN             CURSOR  DISCARDABLE     "res\\MAGNIFY.CUR"
+IDC_CURHAND             CURSOR  DISCARDABLE     "res\\Hand.cur"
+IDC_CURDRAGHAND2        CURSOR  DISCARDABLE     "res\\DragHand2.cur"
+IDC_CURDRAGHAND         CURSOR  DISCARDABLE     "res\\DragHand.cur"
+IDC_CURMAGN2            CURSOR  DISCARDABLE     "res\\curmagn2.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_EDITOR_TOOLBAR TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_SaveDescr
+    SEPARATOR
+    BUTTON      ID_SelectMode
+    SEPARATOR
+    BUTTON      ID_INSERT_TEXT
+    BUTTON      ID_InsertMark
+    BUTTON      ID_STYLES_COMBO
+    SEPARATOR
+    BUTTON      ID_EditStyles
+    BUTTON      ID_MARKCATEGORIES
+END
+
+IDR_VIEWER_TOOLBAR TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      IDC_CB_ZOOM
+    SEPARATOR
+    BUTTON      IDC_CB_LEVEL
+    SEPARATOR
+    BUTTON      IDC_CHECK_OVERLAY
+    BUTTON      IDC_SLIDER_SHADING
+    SEPARATOR
+    BUTTON      ID_VIEW_HIDEALLSYMBOLS
+    BUTTON      ID_VIEW_TEXTLABELS
+    BUTTON      ID_VIEW_MARKS
+    SEPARATOR
+    BUTTON      IDC_EDITOR_MODE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open map...\tCtrl-O",        ID_FILE_OPEN
+        MENUITEM "&Export to BMP...\tCtrl-E",   ID_FILE_EXPORTTOBMP
+        MENUITEM "Merge maps...",               ID_MERGE_MAPS
+        MENUITEM SEPARATOR
+        MENUITEM "Load map symbols...\tCtrl-L", ID_OpenDesc
+        MENUITEM "Save map symbols\tCtrl-S",    ID_SaveDescr
+        MENUITEM "Save map symbols as...",      ID_SaveDescAs
+        MENUITEM "New map symbols...",          ID_NewMapDesc
+        MENUITEM "Load previous map symbols\tF12", ID_LOADPREVIOUSMAPSYMBOLS
+        MENUITEM SEPARATOR
+        MENUITEM "- no recent map symbols -",   ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tAlt-F4",               ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "Editor mode\tF2",             IDC_EDITOR_MODE
+        POPUP "Insert new"
+        BEGIN
+            MENUITEM "Text label\tCtrl-T",          ID_INSERT_TEXT
+            MENUITEM "Mark\tCtrl-M",                ID_InsertMark
+        END
+        POPUP "Order"
+        BEGIN
+            MENUITEM "Bring to front",              ID_ToFront
+            MENUITEM "Send to back",                ID_ToBack
+        END
+        MENUITEM "Delete\tDel",                 ID_DELETE
+        MENUITEM "Properties",                  ID_PROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "Styles...",                   ID_EditStyles
+        MENUITEM "Mark categories...",          ID_MARKCATEGORIES
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Text labels\tF7",             ID_VIEW_TEXTLABELS
+        MENUITEM "Marks\tF8",                   ID_VIEW_MARKS
+        POPUP "Mark categories"
+        BEGIN
+            MENUITEM "Show all categories",         ID_ShowAllMarks
+            MENUITEM "Hide all categories",         ID_HideAllMarks
+        END
+        MENUITEM "Hide unexplored map symbols\tF6", ID_HIDEUNEXPLOREDSYMBOLS
+        MENUITEM "Hide all map symbols\tSpacebar", ID_VIEW_HIDEALLSYMBOLS
+        MENUITEM SEPARATOR
+        MENUITEM "&Overlay mode\tCtrl-Spacebar", IDC_CHECK_OVERLAY
+        MENUITEM "&Filtered drawing\tCtrl-F",   ID_VIEW_FILTERING
+        MENUITEM SEPARATOR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "&Toolbar",                    ID_VIEW_NAVIGATION
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&View documentation...\tF1",  ID_HELP_VIEWREADME
+        MENUITEM SEPARATOR
+        MENUITEM "&About...",                   ID_APP_ABOUT
+    END
+END
+
+IDR_POPUPS MENU DISCARDABLE 
+BEGIN
+    POPUP "0"
+    BEGIN
+        MENUITEM "Properties",                  ID_PROPERTIES
+        MENUITEM "Bring to front",              ID_ToFront
+        MENUITEM "Send to back",                ID_ToBack
+        MENUITEM "Delete\tDel",                 ID_DELETE
+    END
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,1,0,23
+ PRODUCTVERSION 3,1,0,23
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Yury Sidorov\0"
+            VALUE "FileDescription", "Tibia Map Viewer\0"
+            VALUE "FileVersion", "3, 2, 0, 24\0"
+            VALUE "InternalName", "TMViewer\0"
+            VALUE "LegalCopyright", "(C) 2001-2006 by Yury Sidorov aka Super Radz\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "TMViewer.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Tibia Map Viewer\0"
+            VALUE "ProductVersion", "3.2\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS DISCARDABLE 
+BEGIN
+    "E",            ID_FILE_EXPORTTOBMP,    VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_VIEW_FILTERING,      VIRTKEY, CONTROL, NOINVERT
+    "L",            ID_OpenDesc,            VIRTKEY, CONTROL, NOINVERT
+    "M",            ID_InsertMark,          VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_SaveDescr,           VIRTKEY, CONTROL, NOINVERT
+    "T",            ID_INSERT_TEXT,         VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_DELETE,              VIRTKEY, NOINVERT
+    VK_F1,          ID_HELP_VIEWREADME,     VIRTKEY, NOINVERT
+    VK_F12,         ID_LOADPREVIOUSMAPSYMBOLS, VIRTKEY, NOINVERT
+    VK_F2,          IDC_EDITOR_MODE,        VIRTKEY, NOINVERT
+    VK_F6,          ID_HIDEUNEXPLOREDSYMBOLS, VIRTKEY, NOINVERT
+    VK_F7,          ID_VIEW_TEXTLABELS,     VIRTKEY, NOINVERT
+    VK_F8,          ID_VIEW_MARKS,          VIRTKEY, NOINVERT
+    VK_SPACE,       ID_VIEW_HIDEALLSYMBOLS, VIRTKEY, NOINVERT
+    VK_SPACE,       IDC_CHECK_OVERLAY,      VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Tibia Map Viewer"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application\nExit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+    ID_INDICATOR1           " "
+    ID_INDICATOR2           " "
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_OPEN            "Select maps folder\nOpen"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_NAVIGATION      "Show or hide the toolbar\nToggle toolbar"
+    ID_HELP_VIEWREADME      "View ReadMe file."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_CHECK_OVERLAY       "Toggle Overlay mode on/off.\nToggle Overlay mode"
+    IDC_SLIDER_SHADING      "Adjust intensity of the shaded levels in Overlay mode.\nAdjust intensity of the shaded levels"
+    IDC_EDITOR_MODE         "Toggle Editor mode on/off.\nToggle Editor mode"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_FILTERING       "Use filtering while drawing map, when zoom ratio less than 100%"
+    ID_DELETE               "Delete selected objects."
+    ID_INSERT_TEXT          "Insert new text label.\nNew text label"
+    ID_SaveDescr            "Save map symbols into file\nSave map symbols"
+    ID_OpenDesc             "Load map symbols from file"
+    ID_SelectMode           "Activate Selection mode.\nSelection mode"
+    ID_STYLES_COMBO         "Change style.\nChange style"
+    ID_EditStyles           "Open Edit styles dialog.\nEdit styles"
+    ID_FILE_SAVEMAPDESCRIPTIONAS "Save map symbols as other file"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_CB_LEVEL            "Change current level\nChange current level"
+    IDC_CB_ZOOM             "Change zoom ratio\nChange zoom ratio"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_SaveDescAs           "Save map symbols as other file"
+    ID_NewMapDesc           "Clear map symbols"
+    ID_MARKCATEGORIES       "Open Edit mark categories dialog.\nEdit mark categories"
+    ID_InsertMark           "Insert new mark.\nNew mark"
+    ID_VIEW_HIDEALLSYMBOLS  "Hide all map symbols.\nHide all map symbols"
+    ID_ShowAllMarks         "Show all mark categories"
+    ID_HideAllMarks         "Hide all mark categories"
+    ID_HIDEUNEXPLOREDSYMBOLS "Hide map symbols over unexplored area."
+    ID_VIEW_TEXTLABELS      "Toggle text labels on/off.\nView text labels"
+    ID_VIEW_MARKS           "Toggle marks on/off.\nView marks"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_ToFront              "Place objects to front of other."
+    ID_ToBack               "Place objects behind of other."
+    ID_LOADPREVIOUSMAPSYMBOLS "Load previous map symbols file."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\TMViewer.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
